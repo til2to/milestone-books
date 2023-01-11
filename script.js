@@ -1,5 +1,4 @@
-import Book from './book.js'
-
+import Book from './book.js';
 
 class BookList {
   constructor() {
@@ -8,7 +7,7 @@ class BookList {
     this.title = document.getElementById('title');
     this.form = document.querySelector('.form');
     this.author = document.getElementById('author');
-    this.addBtn = document.querySelector('.add')
+    this.addBtn = document.querySelector('.add');
     this.newBooks = document.querySelector('.new-books-container');
 
     this.bookExist = (existiingTitle,
@@ -19,7 +18,6 @@ class BookList {
       this.addBook();
     });
 
-    console.log(this.allBooks)
     this.allBooks.forEach((book, index) => {
       const displayBook = `
       <div class="book-container">
@@ -28,7 +26,7 @@ class BookList {
         <button class="remove" id=${index}>Remove</button>
       </div>
       `;
-      this.newBooks.innerHTML += displayBook
+      this.newBooks.innerHTML += displayBook;
     });
 
     const bookBtns = document.querySelectorAll('.remove');
@@ -41,8 +39,8 @@ class BookList {
   }
 
   /* add book */
-  addBook(title, author){
-    const newBook = new Book(this.title.value, this.author.value)
+  addBook() {
+    const newBook = new Book(this.title.value, this.author.value);
     /* check if book exist */
     let exist = false;
     this.storage.forEach((book) => {
@@ -50,14 +48,14 @@ class BookList {
         exist = true;
       }
     });
-  
+
     /* Dont add if book exist */
     if (exist) return;
-  
+
     /* add book if it doesn't exist already */
-    this.allBooks.unshift({title: newBook.title, author: newBook.author});
+    this.allBooks.unshift({ title: newBook.title, author: newBook.author });
     window.localStorage.setItem('allBooks', JSON.stringify(this.storage));
-    window.location.reload()
+    window.location.reload();
   }
 
   /* remove book */
@@ -68,4 +66,5 @@ class BookList {
   }
 }
 
-const freshBook = new BookList()
+const freshBook = new BookList();
+freshBook.addBook();
