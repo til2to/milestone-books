@@ -31,7 +31,6 @@ class BookList {
     this.allBooks.forEach((book) => {
       if (this.bookExist(book.title, this.title.value)) {
         exist = true;
-        console.log("exist")
       }
     });
   
@@ -56,8 +55,8 @@ class BookList {
 
     /* render each book */
     this.allBooks.forEach((book, index) => {
-      const newElement = document.createElement('li');
-      newLi.innerHTML = `
+      const newLi = document.createElement('li');
+      newElement.innerHTML = `
       <div class="book-container">
         <p class="book-title">title: ${book.title}</p>
         <p class="book-author">Author: ${book.author}</p>
