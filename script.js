@@ -55,7 +55,7 @@ class BookList {
 
     /* render each book */
     this.allBooks.forEach((book, index) => {
-      const newLi = document.createElement('li');
+      const newElement = document.createElement('li');
       newElement.innerHTML = `
       <div class="book-container">
         <p class="book-title">title: ${book.title}</p>
