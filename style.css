@@ -1,7 +1,30 @@
 * {
   /* border: 1px solid red; */
 }
+section{
+  margin: auto;
+}
+h2{
+  text-align: center;
+}
+#header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
+  border: 2px solid black;
+}
+.nav-list{
+  display: flex;
+  padding-left: 0px;
+  gap: 20px;
 
+}
+a{
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
 .new-books-container {
   margin: auto;
   padding: 2px;
@@ -80,5 +103,8 @@ li {
 }
 
 .awesome-book-title {
+  text-align: center;
+}
+#about-container{
   text-align: center;
 }

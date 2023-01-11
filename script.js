@@ -1,22 +1,28 @@
+//Navigation links
+const listBtn=document.querySelector('.list-btn')
+const addNewBtn=document.querySelector('.add-new-btn')
+const aboutBtn=document.querySelector('.contact-btn')
+
+
 class BookList {
-  constructor() {
+  constructor(title = null, author = null) {
     this.title = document.getElementById('title');
     this.form = document.querySelector('.form');
     this.author = document.getElementById('author');
     this.newBooks = document.querySelector('.new-books-container');
     this.storage = JSON.parse(window.localStorage.getItem('allBooks')) || [];
     this.allBooks = this.storage;
-
     this.bookExist = (existiingTitle,
       newTitle) => JSON.stringify(existiingTitle) === JSON.stringify(newTitle);
-
     this.form.addEventListener('submit', (e) => {
       e.preventDefault();
-      this.addBook();
+      this.addBook()
+      this.title.value = ''
+      this.author.value = ''
     });
-
-    this.allBooks.forEach((book, index) => {
-      const displayBook = `
+    this.storage.forEach((book, index) => {
+      if(book.title && book.title !== this.title.value){
+        const displayBook = `
       <div class="book-container">
       <div class="title-author">
       <p class="book-title">"${book.title}"</p>
@@ -27,7 +33,9 @@ class BookList {
         <button class="remove" id=${index}>Remove</button>
       </div>
       `;
-      this.newBooks.innerHTML += displayBook;
+        this.newBooks.innerHTML += displayBook
+      }
+      else return
     });
     /* compare and remove */
     const bookBtns = document.querySelectorAll('.remove');
@@ -38,27 +46,25 @@ class BookList {
       });
     });
   }
-
   /* add book */
-  addBook(title, author) {
-    const newBook = new BookList(title, author);
+  addBook(title, author){
     /* check if book exist */
     let exist = false;
-    this.storage.forEach((book) => {
+    this.allBooks.forEach((book) => {
       if (this.bookExist(book.title, this.title.value)) {
         exist = true;
       }
     });
-
-    /* Dont add if book exist */
-    if (exist) return;
-
     /* add book if it doesn't exist already */
-    this.allBooks.unshift({ title: newBook.title.value, author: newBook.author.value });
+   if(exist === false){
+    const newBook = new BookList(title, author)
+    this.allBooks.unshift({title: newBook.title.value, author: newBook.author.value});
     window.localStorage.setItem('allBooks', JSON.stringify(this.storage));
-    window.location.reload();
+    window.location.reload()
+   }
+    /* Dont add if book exist */
+    else return;
   }
-
   /* remove book */
   remove(buttonId) {
     this.allBooks = this.allBooks.filter((book, index) => index !== buttonId);
