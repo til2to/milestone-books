@@ -1,14 +1,11 @@
-import Book from './book.js';
-
 class BookList {
   constructor() {
-    this.storage = JSON.parse(window.localStorage.getItem('allBooks')) || [];
-    this.allBooks = this.storage;
     this.title = document.getElementById('title');
     this.form = document.querySelector('.form');
     this.author = document.getElementById('author');
-    this.addBtn = document.querySelector('.add');
     this.newBooks = document.querySelector('.new-books-container');
+    this.storage = JSON.parse(window.localStorage.getItem('allBooks')) || [];
+    this.allBooks = this.storage;
 
     this.bookExist = (existiingTitle,
       newTitle) => JSON.stringify(existiingTitle) === JSON.stringify(newTitle);
@@ -21,14 +18,18 @@ class BookList {
     this.allBooks.forEach((book, index) => {
       const displayBook = `
       <div class="book-container">
-        <p class="book-title">title: ${book.title}</p>
-        <p class="book-author">Author: ${book.author}</p>
+      <div class="title-author">
+      <p class="book-title">"${book.title}"</p>
+      <p>by</p>
+      <p class="book-author">${book.author}</p>
+      </div>
+       
         <button class="remove" id=${index}>Remove</button>
       </div>
       `;
       this.newBooks.innerHTML += displayBook;
     });
-
+    /* compare and remove */
     const bookBtns = document.querySelectorAll('.remove');
     bookBtns.forEach((bookBtn) => {
       bookBtn.addEventListener('click', (e) => {
@@ -39,8 +40,8 @@ class BookList {
   }
 
   /* add book */
-  addBook() {
-    const newBook = new Book(this.title.value, this.author.value);
+  addBook(title, author) {
+    const newBook = new BookList(title, author);
     /* check if book exist */
     let exist = false;
     this.storage.forEach((book) => {
@@ -53,7 +54,7 @@ class BookList {
     if (exist) return;
 
     /* add book if it doesn't exist already */
-    this.allBooks.unshift({ title: newBook.title, author: newBook.author });
+    this.allBooks.unshift({ title: newBook.title.value, author: newBook.author.value });
     window.localStorage.setItem('allBooks', JSON.stringify(this.storage));
     window.location.reload();
   }
@@ -65,6 +66,5 @@ class BookList {
     window.location.reload();
   }
 }
-
+/* eslint-disable */
 const freshBook = new BookList();
-freshBook.addBook();
