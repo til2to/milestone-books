@@ -13,10 +13,13 @@ class BookList {
     this.form.addEventListener('submit', (e) => {
       e.preventDefault();
       this.addBook();
+      this.title.value = '';
+      this.author.value = '';
     });
 
-    this.allBooks.forEach((book, index) => {
-      const displayBook = `
+    this.storage.forEach((book, index) => {
+      if (book.title && book.title !== this.title.value) {
+        const displayBook = `
       <div class="book-container">
       <div class="title-author">
       <p class="book-title">"${book.title}"</p>
@@ -27,8 +30,10 @@ class BookList {
         <button class="remove" id=${index}>Remove</button>
       </div>
       `;
-      this.newBooks.innerHTML += displayBook;
+        this.newBooks.innerHTML += displayBook;
+      }
     });
+
     /* compare and remove */
     const bookBtns = document.querySelectorAll('.remove');
     bookBtns.forEach((bookBtn) => {
@@ -41,22 +46,21 @@ class BookList {
 
   /* add book */
   addBook(title, author) {
-    const newBook = new BookList(title, author);
     /* check if book exist */
     let exist = false;
-    this.storage.forEach((book) => {
+    this.allBooks.forEach((book) => {
       if (this.bookExist(book.title, this.title.value)) {
         exist = true;
       }
     });
 
-    /* Dont add if book exist */
-    if (exist) return;
-
     /* add book if it doesn't exist already */
-    this.allBooks.unshift({ title: newBook.title.value, author: newBook.author.value });
-    window.localStorage.setItem('allBooks', JSON.stringify(this.storage));
-    window.location.reload();
+    if (exist === false) {
+      const newBook = new BookList(title, author);
+      this.allBooks.unshift({ title: newBook.title.value, author: newBook.author.value });
+      window.localStorage.setItem('allBooks', JSON.stringify(this.storage));
+      window.location.reload();
+    }
   }
 
   /* remove book */
@@ -66,5 +70,6 @@ class BookList {
     window.location.reload();
   }
 }
+
 /* eslint-disable */
 const freshBook = new BookList();
