@@ -9,16 +9,20 @@ const addNewContainer=document.getElementById('add-new-container')
 const contactContainer=document.getElementById('contact-container')
 
 
-let today = new Date().toLocaleDateString('en-GB', {
+const timeNow = () => {
+  let today = new Date().toLocaleDateString('en-GB', {
   day : 'numeric',
   month : 'short',
   year : 'numeric',
   hour: '2-digit',
   minute: '2-digit',
-  second: '2-digit'
-}).split(' ').join(' ');
+  second: '2-digit',}).split(' ').join(' ');
+  clock.innerHTML = today;
+};
 
-clock.innerHTML = today
+setInterval(() => {
+  timeNow();
+}, 1000);
 
 listBtn.addEventListener('click',()=>{
   listContainer.style.display='block';
