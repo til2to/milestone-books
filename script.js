@@ -2,10 +2,23 @@
 const listBtn=document.querySelector('.list-btn')
 const addNewBtn=document.querySelector('.add-new-btn')
 const aboutBtn=document.querySelector('.contact-btn')
+const clock=document.querySelector('#clock')
 
 const listContainer=document.getElementById('list-container')
 const addNewContainer=document.getElementById('add-new-container')
 const contactContainer=document.getElementById('contact-container')
+
+
+let today = new Date().toLocaleDateString('en-GB', {
+  day : 'numeric',
+  month : 'short',
+  year : 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit'
+}).split(' ').join(' ');
+
+clock.innerHTML = today
 
 listBtn.addEventListener('click',()=>{
   listContainer.style.display='block';
@@ -46,15 +59,12 @@ class BookList {
     this.storage.forEach((book, index) => {
       if (book.title && book.title !== this.title.value) {
         const displayBook = `
-      <div class="book-container">
-      <div class="title-author">
-      <p class="book-title">"${book.title}"</p>
-      <p>by</p>
-      <p class="book-author">${book.author}</p>
-      </div>
-       
+        <div class="book-container">
+        <div class="title-author">
+        <p class="book-title">"${book.title}"</p>
+        <p>by</p>
+        <p class="book-author">${book.author}</p>
         <button class="remove" id=${index}>Remove</button>
-      </div>
       `;
         this.newBooks.innerHTML += displayBook;
       }
