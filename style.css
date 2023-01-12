@@ -132,3 +132,9 @@ li {
   margin: auto;
   width: 60%;
 }
+#add-new-container{
+  display: none;
+}
+#contact-container{
+  display: none;
+}

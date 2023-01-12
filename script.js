@@ -7,6 +7,22 @@ const listContainer=document.getElementById('list-container')
 const addNewContainer=document.getElementById('add-new-container')
 const contactContainer=document.getElementById('contact-container')
 
+listBtn.addEventListener('click',()=>{
+  listContainer.style.display='block';
+  contactContainer.style.display='none';
+  addNewContainer.style.display = 'none';
+})
+
+addNewBtn.addEventListener('click',()=>{
+  listContainer.style.display='none';
+  contactContainer.style.display='none';
+  addNewContainer.style.display = 'block';
+})
+aboutBtn.addEventListener('click',()=>{
+  listContainer.style.display='none';
+  addNewContainer.style.display='none';
+  contactContainer.style.display='block'
+})
 
 class BookList {
   constructor() {
