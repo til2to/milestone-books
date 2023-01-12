@@ -1,22 +1,22 @@
-//Navigation links
-const listBtn=document.querySelector('.list-btn')
-const addNewBtn=document.querySelector('.add-new-btn')
-const aboutBtn=document.querySelector('.contact-btn')
-const clock=document.querySelector('#clock')
+// Navigation links
+const listBtn = document.querySelector('.list-btn');
+const addNewBtn = document.querySelector('.add-new-btn');
+const aboutBtn = document.querySelector('.contact-btn');
+const clock = document.querySelector('#clock');
 
-const listContainer=document.getElementById('list-container')
-const addNewContainer=document.getElementById('add-new-container')
-const contactContainer=document.getElementById('contact-container')
-
+const listContainer = document.getElementById('list-container');
+const addNewContainer = document.getElementById('add-new-container');
+const contactContainer = document.getElementById('contact-container');
 
 const timeNow = () => {
-  let today = new Date().toLocaleDateString('en-GB', {
-  day : 'numeric',
-  month : 'short',
-  year : 'numeric',
-  hour: '2-digit',
-  minute: '2-digit',
-  second: '2-digit',}).split(' ').join(' ');
+  const today = new Date().toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+  }).split(' ').join(' ');
   clock.innerHTML = today;
 };
 
@@ -24,22 +24,22 @@ setInterval(() => {
   timeNow();
 }, 1000);
 
-listBtn.addEventListener('click',()=>{
-  listContainer.style.display='block';
-  contactContainer.style.display='none';
+listBtn.addEventListener('click', () => {
+  listContainer.style.display = 'block';
+  contactContainer.style.display = 'none';
   addNewContainer.style.display = 'none';
-})
+});
 
-addNewBtn.addEventListener('click',()=>{
-  listContainer.style.display='none';
-  contactContainer.style.display='none';
+addNewBtn.addEventListener('click', () => {
+  listContainer.style.display = 'none';
+  contactContainer.style.display = 'none';
   addNewContainer.style.display = 'block';
-})
-aboutBtn.addEventListener('click',()=>{
-  listContainer.style.display='none';
-  addNewContainer.style.display='none';
-  contactContainer.style.display='block'
-})
+});
+aboutBtn.addEventListener('click', () => {
+  listContainer.style.display = 'none';
+  addNewContainer.style.display = 'none';
+  contactContainer.style.display = 'block';
+});
 
 class BookList {
   constructor() {
@@ -68,7 +68,10 @@ class BookList {
         <p class="book-title">"${book.title}"</p>
         <p>by</p>
         <p class="book-author">${book.author}</p>
+        </div>
         <button class="remove" id=${index}>Remove</button>
+       
+        </div>
       `;
         this.newBooks.innerHTML += displayBook;
       }

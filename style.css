@@ -1,10 +1,12 @@
-section{
+section {
   margin: auto;
 }
-h2{
+
+h2 {
   text-align: center;
 }
-#header{
+
+#header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,33 +19,39 @@ h2{
   text-align: right;
 }
 
-.nav-list{
+.nav-list {
   display: flex;
-  padding-left: 0px;
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
 }
 
 .nav-list li:nth-child(3) {
   margin-left: 6px;
 }
 
-.list-btn, .add-new-btn{
-  border-right: 2px solid #073763  ;
+.list-btn,
+.add-new-btn {
+  border-right: 2px solid #073763;
   padding: 10px;
 }
 
-.nav-list > li > a:hover, .nav-list > li > a:focus{
-  color:#064e91;
-}
-
-a {
+.nav-list a {
   color: black;
   text-decoration: none;
   font-weight: bold;
 }
+
+.nav-list > li > a:hover,
+.nav-list > li > a:focus {
+  color: #064e91;
+}
+
 .new-books-container {
   margin: auto;
   padding: 2px;
-  
   border: 1px solid black;
 }
 
@@ -88,11 +96,13 @@ a {
   align-self: flex-end;
   background: white;
 }
-.remove:hover{
+
+.remove:hover {
   cursor: pointer;
   background: #073763;
   color: white;
 }
+
 .title-author {
   display: flex;
   align-items: center;
@@ -116,27 +126,27 @@ input {
   align-self: flex-end;
   background: white;
 }
-.add:hover{
+
+.add:hover {
   cursor: pointer;
   background: #073763;
   color: white;
-}
-li {
-  list-style-type: none;
 }
 
 .awesome-book-title {
   text-align: center;
 }
 
-.contact-text{
+.contact-text {
   margin: auto;
   width: 60%;
 }
-#add-new-container{
+
+#add-new-container {
   display: none;
 }
-#contact-container{
+
+#contact-container {
   display: none;
 }
 
