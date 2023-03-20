@@ -8,6 +8,7 @@ if (localStorage === null || localStorage === undefined || localStorage.length =
   localStorage = [];
 }
 
+// collection of list of books
 let allBooks = localStorage;
 
 /* render each book */
