@@ -70,11 +70,11 @@ To get a local copy up and running, follow these steps.
 
 > Mention all of the collaborators of this project.
 
-👤 **Aubin SIMPEZE**
+👤 **Rose Mutai**
 
-- GitHub: [@githubhandle](https://github.com/aubinleyoung)
-- Twitter: [@twitterhandle](https://twitter.com/SimpezeAubin)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/aubin-simpeze-7a5b7a220/)
+- GitHub: [@githubhandle](https://github.com/rosemutai)
+- Twitter: [@twitterhandle](https://twitter.com/__chepngetich__)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rosemutai)
 
 👤 **Owusu Dennis**
 

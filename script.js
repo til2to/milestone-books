@@ -44,7 +44,7 @@ const addBook = () => {
   /* Dont add if book exist */
   if (exist) return;
 
-  /* add book if it doesn't exist already */
+  /* add book if it doesn't exist */
   allBooks.unshift(newBook);
   window.localStorage.setItem('allBooks', JSON.stringify(localStorage));
   window.location.reload();
