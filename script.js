@@ -19,11 +19,11 @@ class BookList {
 
     this.storage.forEach((book, index) => {
       const displayBook = `<div class="book-container">
-          <div class="title-author">
-            <p class="book-title">${book.title}</p>
-            <p>by</p>
-            <p class="book-author">${book.author}</p>
-          </div>
+        <div class="title-author">
+          <p class="book-title">${book.title}</p>
+          <p>by</p>
+          <p class="book-author">${book.author}</p>
+        </div>
           <button class="remove" id=${index}>Remove</button>
         </div>
       `;
