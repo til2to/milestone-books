@@ -1,0 +1,160 @@
+section {
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
+  border: 2px solid black;
+}
+
+#clock {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.nav-list {
+  display: flex;
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.nav-list li:nth-child(3) {
+  margin-left: 6px;
+}
+
+.list-btn,
+.add-new-btn {
+  border-right: 2px solid #073763;
+  padding: 10px;
+}
+
+.nav-list a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-list > li > a:hover,
+.nav-list > li > a:focus {
+  color: #064e91;
+}
+
+.new-books-container {
+  margin: auto;
+  padding: 2px;
+  border: 1px solid black;
+}
+
+.book-container {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: auto;
+}
+
+.book-container:nth-child(odd) {
+  background-color: #ddd;
+}
+
+.book-container:nth-child(even) {
+  background-color: white;
+}
+
+.book-title {
+  margin: 2px;
+  padding: 0;
+}
+
+.book-author {
+  margin: 0;
+  padding: 0;
+}
+
+.book-container:first-child() {
+  background-color: red;
+}
+
+.new-book-container {
+  display: flex;
+  align-items: center;
+}
+
+.remove {
+  margin: 5px 0;
+  align-self: flex-end;
+  background: white;
+}
+
+.remove:hover {
+  cursor: pointer;
+  background: #073763;
+  color: white;
+}
+
+.title-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input {
+  margin-top: 8px;
+  padding: 5px;
+}
+
+.form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.add {
+  margin-top: 7px;
+  align-self: flex-end;
+  background: white;
+}
+
+.add:hover {
+  cursor: pointer;
+  background: #073763;
+  color: white;
+}
+
+.awesome-book-title {
+  text-align: center;
+}
+
+.contact-text {
+  margin: auto;
+  width: 60%;
+}
+
+#add-new-container {
+  display: none;
+}
+
+#contact-container {
+  display: none;
+}
+
+footer {
+  border: 2px solid #000;
+  padding: 5px;
+  position: fixed;
+  width: 97.5%;
+  bottom: 0;
+  margin-bottom: 20px;
+}
