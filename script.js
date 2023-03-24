@@ -17,10 +17,8 @@ class BookList {
       this.author.value = '';
     });
 
-    /* eslint-disable */
     this.storage.forEach((book, index) => {
-      const displayBook = `
-        <div class="book-container">
+      const displayBook = `<div class="book-container">
           <div class="title-author">
             <p class="book-title">${book.title}</p>
             <p>by</p>
@@ -31,7 +29,6 @@ class BookList {
       `;
       this.newBooks.innerHTML += displayBook;
     });
-    /* eslint-disable */
 
     /* compare and remove */
     const bookBtns = document.querySelectorAll('.remove');
