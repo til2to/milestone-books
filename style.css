@@ -1,0 +1,72 @@
+.new-books-container {
+  margin: auto;
+  padding: 2px;
+  width: 50%;
+  border: 1px solid black;
+}
+
+.book-container {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: auto;
+}
+
+.book-container:nth-child(odd) {
+  background-color: #ddd;
+}
+
+.book-container:nth-child(even) {
+  background-color: white;
+}
+
+.book-title {
+  margin: 2px;
+  padding: 0;
+}
+
+.book-author {
+  margin: 0;
+  padding: 0;
+}
+
+.new-book-container {
+  display: flex;
+  align-items: center;
+}
+
+.remove {
+  margin: 5px 0;
+  align-self: flex-end;
+  background: white;
+}
+
+.title-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input {
+  margin-top: 8px;
+  padding: 5px;
+}
+
+.form {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.add {
+  margin-top: 7px;
+  width: 25%;
+  align-self: flex-end;
+}
+
+.awesome-book-title {
+  text-align: center;
+}
