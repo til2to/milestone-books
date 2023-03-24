@@ -38,7 +38,7 @@
 
 - **[Plain_JS_with_objects]**
 - **[Plain_JS_with_classes]**
-- **[Create_a_complete_website_with_navigation]**
+- **[Make_the_project_SPA]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -70,11 +70,11 @@ To get a local copy up and running, follow these steps.
 
 > Mention all of the collaborators of this project.
 
-👤 **Aubin SIMPEZE**
+👤 **ROSE MUTAI**
 
-- GitHub: [@githubhandle](https://github.com/aubinleyoung)
-- Twitter: [@twitterhandle](https://twitter.com/SimpezeAubin)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/aubin-simpeze-7a5b7a220/)
+- GitHub: [@githubhandle](https://github.com/rosemutai)
+- Twitter: [@twitterhandle](https://twitter.com/__chepngetich)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rosemutai/)
 
 👤 **Owusu Dennis**
 

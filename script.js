@@ -50,7 +50,7 @@ class BookList {
       }
     });
 
-    /* add book if it doesn't exist already */
+    /* add book if it doesn't exist */
     if (exist === false) {
       const newBook = new BookList(title, author);
       this.allBooks.unshift({ title: newBook.title.value, author: newBook.author.value });
