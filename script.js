@@ -70,7 +70,6 @@ class BookList {
         <p class="book-author">${book.author}</p>
         </div>
         <button class="remove" id=${index}>Remove</button>
-       
         </div>
       `;
         this.newBooks.innerHTML += displayBook;
