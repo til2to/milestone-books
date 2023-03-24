@@ -70,18 +70,17 @@ To get a local copy up and running, follow these steps.
 
 > Mention all of the collaborators of this project.
 
-👤 **Aubin SIMPEZE**
+👤 **ROSE MUTAI**
 
-- GitHub: [@githubhandle](https://github.com/aubinleyoung)
-- Twitter: [@twitterhandle](https://twitter.com/SimpezeAubin)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/aubin-simpeze-7a5b7a220/)
+- GitHub: [@githubhandle](https://github.com/rosemutai)
+- Twitter: [@twitterhandle](https://twitter.com/rosemutai)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rosemutai/)
 
 👤 **Owusu Dennis**
 
 - GitHub: [@githubhandle](https://github.com/til2to)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/dennis-owusu-835888206/
-)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/dennis-owusu-835888206/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

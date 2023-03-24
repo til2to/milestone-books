@@ -8,7 +8,7 @@ const listContainer = document.getElementById('list-container');
 const addNewContainer = document.getElementById('add-new-container');
 const contactContainer = document.getElementById('contact-container');
 
-const timeNow = () => {
+const displayDate = () => {
   const today = new Date().toLocaleDateString('en-GB', {
     day: 'numeric',
     month: 'short',
@@ -21,7 +21,7 @@ const timeNow = () => {
 };
 
 setInterval(() => {
-  timeNow();
+  displayDate();
 }, 1000);
 
 listBtn.addEventListener('click', () => {
@@ -78,8 +78,8 @@ class BookList {
     });
 
     /* compare and remove */
-    const bookBtns = document.querySelectorAll('.remove');
-    bookBtns.forEach((bookBtn) => {
+    const deleteBookBtns = document.querySelectorAll('.remove');
+    deleteBookBtns.forEach((bookBtn) => {
       bookBtn.addEventListener('click', (e) => {
         const buttonId = parseInt(e.target.getAttribute('id'), 10);
         this.remove(buttonId);
