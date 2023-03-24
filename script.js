@@ -62,14 +62,14 @@ class BookList {
 
     this.storage.forEach((book, index) => {
       if (book.title && book.title !== this.title.value) {
-        const displayBook = ` <div class="book-container">
+        const displayBook = `<div class="book-container">
           <div class="title-author">
-          <p class="book-title">"${book.title}"</p>
-          <p>by</p>
-          <p class="book-author">${book.author}</p>
+            <p class="book-title">"${book.title}"</p>
+            <p>by</p>
+            <p class="book-author">${book.author}</p>
           </div>
-          <button class="remove" id=${index}>Remove</button>
-        </div>
+            <button class="remove" id=${index}>Remove</button>
+          </div>
         `;
         this.newBooks.innerHTML += displayBook;
       }
