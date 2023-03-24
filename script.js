@@ -25,7 +25,6 @@ class BookList {
       <p>by</p>
       <p class="book-author">${book.author}</p>
       </div>
-      
         <button class="remove" id=${index}>Remove</button>
       </div>
       `;
