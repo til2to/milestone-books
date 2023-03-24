@@ -22,7 +22,7 @@ class BookList {
       const displayBook = `
         <div class="book-container">
           <div class="title-author">
-            <p class="book-title">"${book.title}"</p>
+            <p class="book-title">${book.title}</p>
             <p>by</p>
             <p class="book-author">${book.author}</p>
           </div>
